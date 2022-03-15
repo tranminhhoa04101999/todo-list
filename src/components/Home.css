@@ -1,0 +1,96 @@
+.contaier-app {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  position: absolute;
+  z-index: 0;
+}
+.wrapper-app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 70%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
+}
+.main {
+}
+.app-header {
+  background-color: aliceblue;
+  height: 6%;
+}
+.app-header-name {
+  font-size: 2.1rem;
+  line-height: 2.3rem;
+  padding: 10px 10px;
+  font-family: 'Pacifico', cursive;
+}
+.app-header-title {
+  font-size: 2.7rem;
+  text-align: center;
+  font-weight: 700;
+  padding: 10px 10px;
+}
+.app-header-setting {
+  float: right;
+  padding: 10px 10px;
+}
+.app-header-setting__icon:hover {
+  animation: gearSpin 2s linear infinite;
+  cursor: pointer;
+}
+@keyframes gearSpin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* main */
+.app-main {
+  height: 94%;
+}
+.app-main-left {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.app-main-left-menu {
+  margin-top: 20px;
+}
+.app-main-left-item {
+  padding: 10px 20px;
+}
+.app-main-right {
+  background-color: #fff;
+}
+li.app-main-left-item a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+}
+li.app-main-left-item .navlink:hover {
+  color: var(--primary-color);
+  transform: translateX(6px);
+  padding-left: 10px;
+}
+li.app-main-left-item .navlink.navlink--active {
+  color: var(--primary-color);
+  padding-left: 10px;
+  position: relative;
+}
+li.app-main-left-item .navlink.navlink--active::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  border: 6px solid transparent;
+  border-left-color: var(--primary-color);
+}
