@@ -3,15 +3,22 @@ import {
   faCirclePlus,
   faCheckCircle,
   faCheckDouble,
+  faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addTask, completedSub, percentComplete } from '../redux/store';
 import './AllTask.css';
 
+const INITIAL_DATA = {
+  name: 'Design UI',
+  subTask: [{ name: '', isCompleted: false }],
+};
+
 const AllTask = () => {
   const allTasks = useSelector((state) => state);
   const dispatch = useDispatch();
+  const [dataAdd, setDataAdd] = useState(INITIAL_DATA);
 
   const [showModal, setShowModal] = useState(false);
   const [viewMode, setViewMode] = useState(false);
@@ -39,6 +46,27 @@ const AllTask = () => {
     });
     let percent = (countCompleted / countSub) * 100;
     return percent.toFixed(0);
+  };
+  const addSubTaskHandler = () => {
+    if (dataAdd.subTask.length > 5) {
+    } else {
+      setDataAdd((prev) => ({
+        ...prev,
+        subTask: [...prev.subTask, { name: 'ec', isCompleted: false }],
+      }));
+    }
+  };
+  const removeSub = (props) => {
+    if (dataAdd.subTask.length <= 0) {
+    } else {
+      let data = dataAdd;
+      data.subTask.splice(props.index, 1);
+
+      setDataAdd((prev) => ({
+        ...prev,
+        subTask: data.subTask,
+      }));
+    }
   };
   return (
     <div className="grid container-alltask">
@@ -134,16 +162,35 @@ const AllTask = () => {
             />
           </div>
           <div className="row no-gutters">
-            <div className="col l-3">
-              <div className="modal-content__addsub">Add sub task</div>
+            <div className="col l-3 wrap-btn-left">
+              <div className="modal-content__addsub" onClick={() => addSubTaskHandler()}>
+                Add sub task
+              </div>
+              <div className="modal-content__save">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Save
+              </div>
             </div>
             <div className="col l-9">
-              <input
-                onChange={() => {}}
-                className="modal-content-subname"
-                type="text"
-                placeholder="Sub Task Name"
-              />
+              {dataAdd.subTask.map((item, index) => (
+                <div key={index} className="container-subtask">
+                  <input
+                    onChange={() => {}}
+                    className="modal-content-subname"
+                    type="text"
+                    placeholder="Sub Task Name"
+                  />
+                  <FontAwesomeIcon
+                    icon={faXmark}
+                    size="2x"
+                    className="container-subtask-icon"
+                    onClick={() => removeSub({ index: index })}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
