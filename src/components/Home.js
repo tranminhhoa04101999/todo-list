@@ -12,8 +12,6 @@ const Home = () => {
   const [mode, setMode] = useState(false);
 
   useEffect(() => {
-    console.log(mode);
-
     if (mode) {
       setTheme('--dark-mode');
       setTextColor('--text-dark-mode');

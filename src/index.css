@@ -1,9 +1,10 @@
 :root {
   --primary-color: #45eba5;
-  --light-mode: #fff;
+  --light-mode: #f0f2f5;
   --text-light-mode: #000;
   --dark-mode: #000;
-  --text-dark-mode: #fff;
+  --text-dark-mode: #f0f2f5;
+  --card-color: #fff;
 }
 
 * {
