@@ -31,7 +31,9 @@ const INITIAL_TASK = [
   },
 ];
 const rootReducer = createReducer(INITIAL_TASK, {
-  addTask: (state, action) => console.log('ec', action.payload.name),
+  addTask: (state, action) => {
+    state.push(action.payload);
+  },
   completedSub: (state, action) => {
     let iTask = action.payload.indexTask;
     let iSubTask = action.payload.indexSubTask;
