@@ -35,7 +35,7 @@ const CompletedTask = () => {
   return (
     <div className="grid container-alltask">
       <div className="row no-gutters ">
-        <div className="col l-o-2 l-8 container-card">
+        <div className="col l-o-2 l-8 m-10 m-o-1 c-12 container-card">
           {taskCompleted.map((task, index) => {
             let percentCompleted = percentCompletedHandler({ index: index });
             return (

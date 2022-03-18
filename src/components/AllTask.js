@@ -94,7 +94,7 @@ const AllTask = () => {
   return (
     <div className="grid container-alltask">
       <div className="row no-gutters ">
-        <div className="col l-o-2 l-8 container-card">
+        <div className="col l-o-2 l-8 m-10 m-o-1 c-12 container-card">
           {allTasks.map((task, index) => {
             let percentCompleted = percentCompletedHandler({ index: index });
             return (
@@ -186,7 +186,7 @@ const AllTask = () => {
             />
           </div>
           <div className="row no-gutters">
-            <div className="col l-3 wrap-btn-left">
+            <div className="col l-3 m-2 wrap-btn-left">
               <div className="modal-content__addsub" onClick={() => addSubTaskHandler()}>
                 Add sub task
               </div>
@@ -198,7 +198,7 @@ const AllTask = () => {
                 Save
               </div>
             </div>
-            <div className="col l-9">
+            <div className="col l-9 m-10">
               {dataAdd.subTask.map((item, index) => (
                 <div key={index} className="container-subtask">
                   <input

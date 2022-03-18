@@ -1,0 +1,56 @@
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .alltask-add {
+    bottom: 8%;
+  }
+}
+/* tablet */
+@media (min-width: 740px) {
+  .alltask-add {
+    bottom: 8%;
+  }
+}
+/* ca tablet vs mobile */
+@media (max-width: 1023px) {
+  .modal-content__addsub {
+    top: 88%;
+    bottom: 2%;
+    margin-left: 170px;
+    line-height: 3rem;
+    animation: none;
+  }
+}
+/* mobile */
+@media (max-width: 739px) {
+  .app-header-name,
+  .app-header-title {
+    font-size: 1.5rem;
+  }
+  li.app-main-left-item a {
+    font-size: 1.2rem;
+  }
+  .app-header-bars {
+    display: block;
+    padding: 10px 10px;
+  }
+  .app-header-name {
+    display: none;
+  }
+  .alltask-add {
+    bottom: 8%;
+  }
+  .app-main-left-menu {
+    margin-top: 4px;
+  }
+  li.app-main-left-item .navlink.navlink--active::before {
+    top: 2px;
+    border-width: 4px;
+  }
+  .app-main-left--active {
+  }
+  .app-main-left .app-main-left--noactive {
+    display: none;
+  }
+  .modal-content__addsub {
+    margin-left: 150px;
+  }
+}

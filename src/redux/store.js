@@ -9,9 +9,9 @@ const INITIAL_TASK = [
   {
     name: 'Design UI',
     subTask: [
-      { name: 'Design login', isCompleted: false },
-      { name: 'Design Logout', isCompleted: false },
-      { name: 'Design Home', isCompleted: false },
+      { name: 'Design login', isCompleted: true },
+      { name: 'Design Logout', isCompleted: true },
+      { name: 'Design Home', isCompleted: true },
     ],
   },
   {

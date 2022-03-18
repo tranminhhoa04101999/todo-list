@@ -33,6 +33,9 @@
   padding: 10px 10px;
   font-family: 'Pacifico', cursive;
 }
+.app-header-bars {
+  display: none;
+}
 .app-header-title {
   font-size: 2.7rem;
   text-align: center;
