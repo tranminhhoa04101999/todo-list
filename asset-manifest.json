@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/todo-list/static/css/main.57a59618.css",
-    "main.js": "/todo-list/static/js/main.01a65146.js",
+    "main.js": "/todo-list/static/js/main.c42985d2.js",
     "static/media/background_batman.jpg": "/todo-list/static/media/background_batman.77e943052a126455360b.jpg",
     "index.html": "/todo-list/index.html",
     "main.57a59618.css.map": "/todo-list/static/css/main.57a59618.css.map",
-    "main.01a65146.js.map": "/todo-list/static/js/main.01a65146.js.map"
+    "main.c42985d2.js.map": "/todo-list/static/js/main.c42985d2.js.map"
   },
   "entrypoints": [
     "static/css/main.57a59618.css",
-    "static/js/main.01a65146.js"
+    "static/js/main.c42985d2.js"
   ]
 }
