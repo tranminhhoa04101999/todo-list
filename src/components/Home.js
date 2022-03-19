@@ -46,7 +46,7 @@ const Home = () => {
           <div className="col l-4 m-4 c-4">
             <div className="app-header-setting">
               <FontAwesomeIcon
-                onClick={() => setMode((prev) => !prev)}
+                // onClick={() => setMode((prev) => !prev)}
                 className="app-header-setting__icon"
                 icon={faGear}
                 size="2x"
@@ -63,7 +63,7 @@ const Home = () => {
             >
               <li className="app-main-left-item">
                 <NavLink
-                  to="allTask"
+                  to={{ pathname: '/allTask' }}
                   className={(data) =>
                     'navlink' + (data.isActive ? ' navlink--active' : '')
                   }

@@ -9,6 +9,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addTask, completedSub, percentComplete } from '../redux/store';
 import './AllTask.css';
+import { useLocation } from 'react-router-dom';
 
 const INITIAL_DATA = {
   name: '',
@@ -22,6 +23,8 @@ const AllTask = () => {
 
   const [showModal, setShowModal] = useState(false);
   const [viewMode, setViewMode] = useState(false);
+
+  const { state } = useLocation();
 
   const completedSubTaskHandler = (props) => {
     const action = completedSub({
